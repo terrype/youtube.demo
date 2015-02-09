@@ -1,0 +1,360 @@
+21:04:11 **** Build of configuration Debug for project lpc_board_nxp_lpcxpresso_1769 ****
+make all 
+Building file: ../src/board.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/board.d" -MT"src/board.d" -o "src/board.o" "../src/board.c"
+../src/board.c: In function 'Board_I2C_Init':
+../src/board.c:267:2: warning: enumeration value 'I2C_NUM_INTERFACE' not handled in switch [-Wswitch]
+  switch (id) {
+  ^
+Finished building: ../src/board.c
+ 
+Building file: ../src/board_sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/board_sysinit.d" -MT"src/board_sysinit.d" -o "src/board_sysinit.o" "../src/board_sysinit.c"
+Finished building: ../src/board_sysinit.c
+ 
+Building file: ../src/lpc_phy_smsc87x0.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lpc_phy_smsc87x0.d" -MT"src/lpc_phy_smsc87x0.d" -o "src/lpc_phy_smsc87x0.o" "../src/lpc_phy_smsc87x0.c"
+Finished building: ../src/lpc_phy_smsc87x0.c
+ 
+Building target: liblpc_board_nxp_lpcxpresso_1769.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_board_nxp_lpcxpresso_1769.a"  ./src/board.o ./src/board_sysinit.o ./src/lpc_phy_smsc87x0.o   
+c:\nxp\LPCXpresso_7.2.0_153\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating liblpc_board_nxp_lpcxpresso_1769.a
+Finished building target: liblpc_board_nxp_lpcxpresso_1769.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_board_nxp_lpcxpresso_1769.a" ; # arm-none-eabi-objdump -h -S "liblpc_board_nxp_lpcxpresso_1769.a" >"liblpc_board_nxp_lpcxpresso_1769.lss"
+   text	   data	    bss	    dec	    hex	filename
+   1072	      0	      0	   1072	    430	board.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+    156	      0	      0	    156	     9c	board_sysinit.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+    576	      0	     18	    594	    252	lpc_phy_smsc87x0.o (ex liblpc_board_nxp_lpcxpresso_1769.a)
+ 
+21:04:15 **** Build of configuration Debug for project lpc_chip_175x_6x ****
+make all 
+Building file: ../src/adc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/adc_17xx_40xx.d" -MT"src/adc_17xx_40xx.d" -o "src/adc_17xx_40xx.o" "../src/adc_17xx_40xx.c"
+Finished building: ../src/adc_17xx_40xx.c
+ 
+Building file: ../src/can_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/can_17xx_40xx.d" -MT"src/can_17xx_40xx.d" -o "src/can_17xx_40xx.o" "../src/can_17xx_40xx.c"
+../src/can_17xx_40xx.c: In function 'Chip_CAN_Init':
+../src/can_17xx_40xx.c:751:20: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t i;
+                    ^
+Finished building: ../src/can_17xx_40xx.c
+ 
+Building file: ../src/chip_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/chip_17xx_40xx.d" -MT"src/chip_17xx_40xx.d" -o "src/chip_17xx_40xx.o" "../src/chip_17xx_40xx.c"
+Finished building: ../src/chip_17xx_40xx.c
+ 
+Building file: ../src/clock_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/clock_17xx_40xx.d" -MT"src/clock_17xx_40xx.d" -o "src/clock_17xx_40xx.o" "../src/clock_17xx_40xx.c"
+../src/clock_17xx_40xx.c: In function 'Chip_Clock_GetSYSCLKRate':
+../src/clock_17xx_40xx.c:320:2: warning: enumeration value 'SYSCTL_PLLCLKSRC_RESERVED2' not handled in switch [-Wswitch]
+  switch (Chip_Clock_GetMainPLLSource()) {
+  ^
+Finished building: ../src/clock_17xx_40xx.c
+ 
+Building file: ../src/cmp_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/cmp_17xx_40xx.d" -MT"src/cmp_17xx_40xx.d" -o "src/cmp_17xx_40xx.o" "../src/cmp_17xx_40xx.c"
+Finished building: ../src/cmp_17xx_40xx.c
+ 
+Building file: ../src/crc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/crc_17xx_40xx.d" -MT"src/crc_17xx_40xx.d" -o "src/crc_17xx_40xx.o" "../src/crc_17xx_40xx.c"
+Finished building: ../src/crc_17xx_40xx.c
+ 
+Building file: ../src/dac_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/dac_17xx_40xx.d" -MT"src/dac_17xx_40xx.d" -o "src/dac_17xx_40xx.o" "../src/dac_17xx_40xx.c"
+Finished building: ../src/dac_17xx_40xx.c
+ 
+Building file: ../src/eeprom_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/eeprom_17xx_40xx.d" -MT"src/eeprom_17xx_40xx.d" -o "src/eeprom_17xx_40xx.o" "../src/eeprom_17xx_40xx.c"
+Finished building: ../src/eeprom_17xx_40xx.c
+ 
+Building file: ../src/emc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/emc_17xx_40xx.d" -MT"src/emc_17xx_40xx.d" -o "src/emc_17xx_40xx.o" "../src/emc_17xx_40xx.c"
+Finished building: ../src/emc_17xx_40xx.c
+ 
+Building file: ../src/enet_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/enet_17xx_40xx.d" -MT"src/enet_17xx_40xx.d" -o "src/enet_17xx_40xx.o" "../src/enet_17xx_40xx.c"
+Finished building: ../src/enet_17xx_40xx.c
+ 
+Building file: ../src/gpdma_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpdma_17xx_40xx.d" -MT"src/gpdma_17xx_40xx.d" -o "src/gpdma_17xx_40xx.o" "../src/gpdma_17xx_40xx.c"
+Finished building: ../src/gpdma_17xx_40xx.c
+ 
+Building file: ../src/gpio_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpio_17xx_40xx.d" -MT"src/gpio_17xx_40xx.d" -o "src/gpio_17xx_40xx.o" "../src/gpio_17xx_40xx.c"
+Finished building: ../src/gpio_17xx_40xx.c
+ 
+Building file: ../src/gpioint_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/gpioint_17xx_40xx.d" -MT"src/gpioint_17xx_40xx.d" -o "src/gpioint_17xx_40xx.o" "../src/gpioint_17xx_40xx.c"
+Finished building: ../src/gpioint_17xx_40xx.c
+ 
+Building file: ../src/i2c_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2c_17xx_40xx.d" -MT"src/i2c_17xx_40xx.d" -o "src/i2c_17xx_40xx.o" "../src/i2c_17xx_40xx.c"
+Finished building: ../src/i2c_17xx_40xx.c
+ 
+Building file: ../src/i2s_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/i2s_17xx_40xx.d" -MT"src/i2s_17xx_40xx.d" -o "src/i2s_17xx_40xx.o" "../src/i2s_17xx_40xx.c"
+Finished building: ../src/i2s_17xx_40xx.c
+ 
+Building file: ../src/iap.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iap.d" -MT"src/iap.d" -o "src/iap.o" "../src/iap.c"
+Finished building: ../src/iap.c
+ 
+Building file: ../src/iocon_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/iocon_17xx_40xx.d" -MT"src/iocon_17xx_40xx.d" -o "src/iocon_17xx_40xx.o" "../src/iocon_17xx_40xx.c"
+Finished building: ../src/iocon_17xx_40xx.c
+ 
+Building file: ../src/lcd_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/lcd_17xx_40xx.d" -MT"src/lcd_17xx_40xx.d" -o "src/lcd_17xx_40xx.o" "../src/lcd_17xx_40xx.c"
+Finished building: ../src/lcd_17xx_40xx.c
+ 
+Building file: ../src/pmu_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/pmu_17xx_40xx.d" -MT"src/pmu_17xx_40xx.d" -o "src/pmu_17xx_40xx.o" "../src/pmu_17xx_40xx.c"
+Finished building: ../src/pmu_17xx_40xx.c
+ 
+Building file: ../src/ring_buffer.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ring_buffer.d" -MT"src/ring_buffer.d" -o "src/ring_buffer.o" "../src/ring_buffer.c"
+Finished building: ../src/ring_buffer.c
+ 
+Building file: ../src/ritimer_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ritimer_17xx_40xx.d" -MT"src/ritimer_17xx_40xx.d" -o "src/ritimer_17xx_40xx.o" "../src/ritimer_17xx_40xx.c"
+Finished building: ../src/ritimer_17xx_40xx.c
+ 
+Building file: ../src/rtc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/rtc_17xx_40xx.d" -MT"src/rtc_17xx_40xx.d" -o "src/rtc_17xx_40xx.o" "../src/rtc_17xx_40xx.c"
+Finished building: ../src/rtc_17xx_40xx.c
+ 
+Building file: ../src/sdc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdc_17xx_40xx.d" -MT"src/sdc_17xx_40xx.d" -o "src/sdc_17xx_40xx.o" "../src/sdc_17xx_40xx.c"
+Finished building: ../src/sdc_17xx_40xx.c
+ 
+Building file: ../src/sdmmc_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sdmmc_17xx_40xx.d" -MT"src/sdmmc_17xx_40xx.d" -o "src/sdmmc_17xx_40xx.o" "../src/sdmmc_17xx_40xx.c"
+Finished building: ../src/sdmmc_17xx_40xx.c
+ 
+Building file: ../src/spi_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/spi_17xx_40xx.d" -MT"src/spi_17xx_40xx.d" -o "src/spi_17xx_40xx.o" "../src/spi_17xx_40xx.c"
+../src/spi_17xx_40xx.c: In function 'Chip_SPI_Int_FlushData':
+../src/spi_17xx_40xx.c:138:20: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  volatile uint32_t tmp;
+                    ^
+Finished building: ../src/spi_17xx_40xx.c
+ 
+Building file: ../src/ssp_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/ssp_17xx_40xx.d" -MT"src/ssp_17xx_40xx.d" -o "src/ssp_17xx_40xx.o" "../src/ssp_17xx_40xx.c"
+Finished building: ../src/ssp_17xx_40xx.c
+ 
+Building file: ../src/stopwatch_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/stopwatch_17xx_40xx.d" -MT"src/stopwatch_17xx_40xx.d" -o "src/stopwatch_17xx_40xx.o" "../src/stopwatch_17xx_40xx.c"
+Finished building: ../src/stopwatch_17xx_40xx.c
+ 
+Building file: ../src/sysctl_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysctl_17xx_40xx.d" -MT"src/sysctl_17xx_40xx.d" -o "src/sysctl_17xx_40xx.o" "../src/sysctl_17xx_40xx.c"
+Finished building: ../src/sysctl_17xx_40xx.c
+ 
+Building file: ../src/sysinit_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/sysinit_17xx_40xx.d" -MT"src/sysinit_17xx_40xx.d" -o "src/sysinit_17xx_40xx.o" "../src/sysinit_17xx_40xx.c"
+Finished building: ../src/sysinit_17xx_40xx.c
+ 
+Building file: ../src/timer_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/timer_17xx_40xx.d" -MT"src/timer_17xx_40xx.d" -o "src/timer_17xx_40xx.o" "../src/timer_17xx_40xx.c"
+Finished building: ../src/timer_17xx_40xx.c
+ 
+Building file: ../src/uart_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/uart_17xx_40xx.d" -MT"src/uart_17xx_40xx.d" -o "src/uart_17xx_40xx.o" "../src/uart_17xx_40xx.c"
+Finished building: ../src/uart_17xx_40xx.c
+ 
+Building file: ../src/wwdt_17xx_40xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"src/wwdt_17xx_40xx.d" -MT"src/wwdt_17xx_40xx.d" -o "src/wwdt_17xx_40xx.o" "../src/wwdt_17xx_40xx.c"
+Finished building: ../src/wwdt_17xx_40xx.c
+ 
+Building target: liblpc_chip_175x_6x.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "liblpc_chip_175x_6x.a"  ./src/adc_17xx_40xx.o ./src/can_17xx_40xx.o ./src/chip_17xx_40xx.o ./src/clock_17xx_40xx.o ./src/cmp_17xx_40xx.o ./src/crc_17xx_40xx.o ./src/dac_17xx_40xx.o ./src/eeprom_17xx_40xx.o ./src/emc_17xx_40xx.o ./src/enet_17xx_40xx.o ./src/gpdma_17xx_40xx.o ./src/gpio_17xx_40xx.o ./src/gpioint_17xx_40xx.o ./src/i2c_17xx_40xx.o ./src/i2s_17xx_40xx.o ./src/iap.o ./src/iocon_17xx_40xx.o ./src/lcd_17xx_40xx.o ./src/pmu_17xx_40xx.o ./src/ring_buffer.o ./src/ritimer_17xx_40xx.o ./src/rtc_17xx_40xx.o ./src/sdc_17xx_40xx.o ./src/sdmmc_17xx_40xx.o ./src/spi_17xx_40xx.o ./src/ssp_17xx_40xx.o ./src/stopwatch_17xx_40xx.o ./src/sysctl_17xx_40xx.o ./src/sysinit_17xx_40xx.o ./src/timer_17xx_40xx.o ./src/uart_17xx_40xx.o ./src/wwdt_17xx_40xx.o   
+c:\nxp\LPCXpresso_7.2.0_153\lpcxpresso\tools\bin\arm-none-eabi-ar.exe: creating liblpc_chip_175x_6x.a
+Finished building target: liblpc_chip_175x_6x.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "liblpc_chip_175x_6x.a" ; # arm-none-eabi-objdump -h -S "liblpc_chip_175x_6x.a" >"liblpc_chip_175x_6x.lss"
+   text	   data	    bss	    dec	    hex	filename
+    404	      0	      0	    404	    194	adc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   4792	      0	      0	   4792	   12b8	can_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     80	      0	      0	     80	     50	chip_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    760	      0	      0	    760	    2f8	clock_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	cmp_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	crc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     56	      0	      0	     56	     38	dac_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	eeprom_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	emc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    528	      0	      4	    532	    214	enet_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1348	     96	      8	   1452	    5ac	gpdma_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	gpio_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	gpioint_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1620	     84	    120	   1824	    720	i2c_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    720	      0	      0	    720	    2d0	i2s_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    408	      0	      0	    408	    198	iap.o (ex liblpc_chip_175x_6x.a)
+    128	      0	      0	    128	     80	iocon_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	lcd_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    156	      0	      0	    156	     9c	pmu_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    360	      0	      0	    360	    168	ring_buffer.o (ex liblpc_chip_175x_6x.a)
+     92	      0	      0	     92	     5c	ritimer_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    388	      0	      0	    388	    184	rtc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	sdc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+      0	      0	      0	      0	      0	sdmmc_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    468	      0	      0	    468	    1d4	spi_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1084	      0	      0	   1084	    43c	ssp_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    172	      0	     12	    184	     b8	stopwatch_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     20	      0	      0	     20	     14	sysctl_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    260	      0	      0	    260	    104	sysinit_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+    128	      0	      0	    128	     80	timer_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+   1036	      0	      1	   1037	    40d	uart_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+     44	      0	      0	     44	     2c	wwdt_17xx_40xx.o (ex liblpc_chip_175x_6x.a)
+ 
+21:04:33 **** Build of configuration Debug for project lpcusblib_MassStorageHost ****
+make all 
+Building file: ../lpcusblib/Drivers/USB/Core/HCD/OHCI/OHCI.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/HCD/OHCI/OHCI.d" -MT"lpcusblib/Drivers/USB/Core/HCD/OHCI/OHCI.d" -o "lpcusblib/Drivers/USB/Core/HCD/OHCI/OHCI.o" "../lpcusblib/Drivers/USB/Core/HCD/OHCI/OHCI.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/HCD/OHCI/OHCI.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/HCD/HCD.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/HCD/HCD.d" -MT"lpcusblib/Drivers/USB/Core/HCD/HCD.d" -o "lpcusblib/Drivers/USB/Core/HCD/HCD.o" "../lpcusblib/Drivers/USB/Core/HCD/HCD.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/HCD/HCD.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/HAL/LPC17XX/HAL_LPC17xx.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/HAL/LPC17XX/HAL_LPC17xx.d" -MT"lpcusblib/Drivers/USB/Core/HAL/LPC17XX/HAL_LPC17xx.d" -o "lpcusblib/Drivers/USB/Core/HAL/LPC17XX/HAL_LPC17xx.o" "../lpcusblib/Drivers/USB/Core/HAL/LPC17XX/HAL_LPC17xx.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/HAL/LPC17XX/HAL_LPC17xx.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/ConfigDescriptor.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/ConfigDescriptor.d" -MT"lpcusblib/Drivers/USB/Core/ConfigDescriptor.d" -o "lpcusblib/Drivers/USB/Core/ConfigDescriptor.o" "../lpcusblib/Drivers/USB/Core/ConfigDescriptor.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/ConfigDescriptor.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/Host.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/Host.d" -MT"lpcusblib/Drivers/USB/Core/Host.d" -o "lpcusblib/Drivers/USB/Core/Host.o" "../lpcusblib/Drivers/USB/Core/Host.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/Host.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/HostStandardReq.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/HostStandardReq.d" -MT"lpcusblib/Drivers/USB/Core/HostStandardReq.d" -o "lpcusblib/Drivers/USB/Core/HostStandardReq.o" "../lpcusblib/Drivers/USB/Core/HostStandardReq.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/HostStandardReq.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/Pipe.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/Pipe.d" -MT"lpcusblib/Drivers/USB/Core/Pipe.d" -o "lpcusblib/Drivers/USB/Core/Pipe.o" "../lpcusblib/Drivers/USB/Core/Pipe.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/Pipe.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/PipeStream.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/PipeStream.d" -MT"lpcusblib/Drivers/USB/Core/PipeStream.d" -o "lpcusblib/Drivers/USB/Core/PipeStream.o" "../lpcusblib/Drivers/USB/Core/PipeStream.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/PipeStream.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/USBController.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/USBController.d" -MT"lpcusblib/Drivers/USB/Core/USBController.d" -o "lpcusblib/Drivers/USB/Core/USBController.o" "../lpcusblib/Drivers/USB/Core/USBController.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/USBController.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/USBMemory.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/USBMemory.d" -MT"lpcusblib/Drivers/USB/Core/USBMemory.d" -o "lpcusblib/Drivers/USB/Core/USBMemory.o" "../lpcusblib/Drivers/USB/Core/USBMemory.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/USBMemory.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Core/USBTask.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Core/USBTask.d" -MT"lpcusblib/Drivers/USB/Core/USBTask.d" -o "lpcusblib/Drivers/USB/Core/USBTask.o" "../lpcusblib/Drivers/USB/Core/USBTask.c"
+Finished building: ../lpcusblib/Drivers/USB/Core/USBTask.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Class/Host/MassStorageClassHost.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Class/Host/MassStorageClassHost.d" -MT"lpcusblib/Drivers/USB/Class/Host/MassStorageClassHost.d" -o "lpcusblib/Drivers/USB/Class/Host/MassStorageClassHost.o" "../lpcusblib/Drivers/USB/Class/Host/MassStorageClassHost.c"
+Finished building: ../lpcusblib/Drivers/USB/Class/Host/MassStorageClassHost.c
+ 
+Building file: ../lpcusblib/Drivers/USB/Class/Common/HIDParser.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"lpcusblib/Drivers/USB/Class/Common/HIDParser.d" -MT"lpcusblib/Drivers/USB/Class/Common/HIDParser.d" -o "lpcusblib/Drivers/USB/Class/Common/HIDParser.o" "../lpcusblib/Drivers/USB/Class/Common/HIDParser.c"
+Finished building: ../lpcusblib/Drivers/USB/Class/Common/HIDParser.c
+ 
+Building file: ../fatfs/src/ff.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"fatfs/src/ff.d" -MT"fatfs/src/ff.d" -o "fatfs/src/ff.o" "../fatfs/src/ff.c"
+Finished building: ../fatfs/src/ff.c
+ 
+Building file: ../fatfs/src/fs_usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"fatfs/src/fs_usb.d" -MT"fatfs/src/fs_usb.d" -o "fatfs/src/fs_usb.o" "../fatfs/src/fs_usb.c"
+Finished building: ../fatfs/src/fs_usb.c
+ 
+Building file: ../fatfs/src/rtc.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"fatfs/src/rtc.d" -MT"fatfs/src/rtc.d" -o "fatfs/src/rtc.o" "../fatfs/src/rtc.c"
+Finished building: ../fatfs/src/rtc.c
+ 
+Building file: ../example/src/MassStorageHost.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/MassStorageHost.d" -MT"example/src/MassStorageHost.d" -o "example/src/MassStorageHost.o" "../example/src/MassStorageHost.c"
+Finished building: ../example/src/MassStorageHost.c
+ 
+Building file: ../example/src/cr_startup_lpc175x_6x.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/cr_startup_lpc175x_6x.d" -MT"example/src/cr_startup_lpc175x_6x.d" -o "example/src/cr_startup_lpc175x_6x.o" "../example/src/cr_startup_lpc175x_6x.c"
+Finished building: ../example/src/cr_startup_lpc175x_6x.c
+ 
+Building file: ../example/src/sysinit.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -std=gnu99 -D__REDLIB__ -DDEBUG -D__CODE_RED -D__USE_LPCOPEN -D__LPC175X_6X__ -DUSB_HOST_ONLY -DCORE_M3 -I"C:\projects\lpc_chip_175x_6x\inc" -I"C:\projects\lpc_board_nxp_lpcxpresso_1769\inc" -I"C:\projects\lpcusblib_MassStorageHost\example\inc" -I"C:\projects\lpcusblib_MassStorageHost\lpcusblib\Drivers\USB" -I"C:\projects\lpcusblib_MassStorageHost\fatfs\inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -mcpu=cortex-m3 -mthumb -specs=redlib.specs -MMD -MP -MF"example/src/sysinit.d" -MT"example/src/sysinit.d" -o "example/src/sysinit.o" "../example/src/sysinit.c"
+Finished building: ../example/src/sysinit.c
+ 
+Building target: lpcusblib_MassStorageHost.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"C:\projects\lpc_chip_175x_6x\Debug" -L"C:\projects\lpc_board_nxp_lpcxpresso_1769\Debug" -Xlinker -Map="lpcusblib_MassStorageHost.map" -Xlinker --gc-sections -mcpu=cortex-m3 -mthumb -T "lpcusblib_MassStorageHost_Debug.ld" -o "lpcusblib_MassStorageHost.axf"  ./lpcusblib/Drivers/USB/Core/HCD/OHCI/OHCI.o  ./lpcusblib/Drivers/USB/Core/HCD/HCD.o  ./lpcusblib/Drivers/USB/Core/HAL/LPC17XX/HAL_LPC17xx.o  ./lpcusblib/Drivers/USB/Core/ConfigDescriptor.o ./lpcusblib/Drivers/USB/Core/Host.o ./lpcusblib/Drivers/USB/Core/HostStandardReq.o ./lpcusblib/Drivers/USB/Core/Pipe.o ./lpcusblib/Drivers/USB/Core/PipeStream.o ./lpcusblib/Drivers/USB/Core/USBController.o ./lpcusblib/Drivers/USB/Core/USBMemory.o ./lpcusblib/Drivers/USB/Core/USBTask.o  ./lpcusblib/Drivers/USB/Class/Host/MassStorageClassHost.o  ./lpcusblib/Drivers/USB/Class/Common/HIDParser.o  ./fatfs/src/ff.o ./fatfs/src/fs_usb.o ./fatfs/src/rtc.o  ./example/src/MassStorageHost.o ./example/src/cr_startup_lpc175x_6x.o ./example/src/sysinit.o   -llpc_board_nxp_lpcxpresso_1769 -llpc_chip_175x_6x
+Finished building target: lpcusblib_MassStorageHost.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size "lpcusblib_MassStorageHost.axf"; # arm-none-eabi-objcopy -v -O binary "lpcusblib_MassStorageHost.axf" "lpcusblib_MassStorageHost.bin" ; # checksum -p LPC1769 -d "lpcusblib_MassStorageHost.bin";
+   text	   data	    bss	    dec	    hex	filename
+  28648	     24	  15208	  43880	   ab68	lpcusblib_MassStorageHost.axf
+ 

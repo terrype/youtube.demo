@@ -1,0 +1,21 @@
+!SESSION 2015-02-09 21:03:18.819 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_AU
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2015-02-09 21:03:28.570
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Duplicate id found: org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator
+
+!ENTRY org.eclipse.ui 4 4 2015-02-09 21:03:28.580
+!MESSAGE Plugin org.eclipse.cdt.ui, extension org.eclipse.ui.decorators, id org.eclipse.cdt.internal.ui.CustomBuildSettingsDecorator: Unknown extension tag found: decorator
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-02-09 21:04:00.581
+!MESSAGE Indexed 'lpc_board_nxp_lpcxpresso_1769' (3 sources, 69 headers) in 1.27 sec: 4,207 declarations; 7,029 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-02-09 21:04:01.980
+!MESSAGE Indexed 'lpc_chip_175x_6x' (32 sources, 83 headers) in 1.36 sec: 5,543 declarations; 13,471 references; 4 unresolved inclusions; 4 syntax errors; 8 unresolved names (0.04%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2015-02-09 21:04:03.420
+!MESSAGE Indexed 'lpcusblib_MassStorageHost' (19 sources, 108 headers) in 1.42 sec: 7,225 declarations; 16,712 references; 0 unresolved inclusions; 0 syntax errors; 8 unresolved names (0.03%)
